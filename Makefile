@@ -2,19 +2,19 @@ CC=gcc
 sdir=src/
 odir=obj/
 idir=include/
-_src=gstart.c gstartfunc.c
-_obj=gstart.o gstartfunc.o
-_deps=gstart.h
+_src=gtstartfunc.c gtstart.c
+_obj=gtstartfunc.o gtstart.o
+_deps=gtstart.h
 
 cflags=-I$(idir)
 
 obj=$(patsubst %, $(odir)%, $(_obj))
-src=$(patsubst %, $(sdir)%, $(_src))
-deps=$(patsubst %, $(idir)%, $(_deps))
 
-$(odir)%.o: $(src)%.c $(deps)
-	$(CC) -o $@ -c $< $(cflags)
-gstartmain : $(obj)
-	$(CC) -o $@ $^ $(cflags)
-clean :
-	$(RM) $(obj) gstartmain
+gt: $(obj)
+	$(CC) `gtk-config --libs` `gtk-config --cflags` -o $@ $^ $(cflags)
+
+$(odir)%.o:	$(sdir)%.c
+	$(CC) `gtk-config --libs` `gtk-config --cflags` -o $@ -c $< $(cflags)
+
+clean:
+	$(RM) $(obj) gt

@@ -2,14 +2,14 @@
 
 #include "gtstart.h"
 
-static gint
+gint
 delete_event_cb(GtkWidget* window, GdkEventAny* e,gpointer data)
 {
 	gtk_main_quit();
 	return FALSE;
 }
 
-static void
+void
 button_click_cb(GtkWidget* w, gpointer data)
 {
 	GtkWidget* label;
