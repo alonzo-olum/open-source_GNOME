@@ -9,13 +9,13 @@ int main(int argc, char** argv){
 	
 	gtk_init(&argc,&argv);
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-	button= gtk_button_new();
+	button = gtk_button_new();
 
-	label = gtk_label_new("Start 101!");
+	label = gtk_label_new("TENET 232");
 	gtk_container_add(GTK_CONTAINER(button),label);
 	gtk_container_add(GTK_CONTAINER(window),button);
 
-	gtk_window_set_title(GTK_WINDOW(window),"Start X");
+	gtk_window_set_title(GTK_WINDOW(window),"start X");
 	gtk_container_set_border_width(GTK_CONTAINER(button),10);
 
 	gtk_signal_connect(GTK_OBJECT(window),

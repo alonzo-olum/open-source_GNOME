@@ -1,0 +1,11 @@
+#CRoaring Library
+Its goal is to provide a high performance low-level implementation that fully
+take advantage of the latest hardware.
+
+##API
+
+c interface is found in the files:
+	- src/roaring.h
+
+c++ interface is found in the files:
+	- roaring.hh

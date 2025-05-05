@@ -8,8 +8,8 @@ _src=gtstartfunc.c gtstart.c
 _obj=gtstartfunc.o gtstart.o
 
 cflags=-I$(idir)
-gflags=`gtk-config --cflags` 
-glibs=`gtk-config --libs` 
+gflags=`gtk-config --cflags`
+glibs=`gtk-config --libs`
 
 obj=$(patsubst %, $(odir)%, $(_obj))
 
